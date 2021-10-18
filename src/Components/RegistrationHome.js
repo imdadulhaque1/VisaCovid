@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ScrollView } from "react-native";
 
-export default function App() {
+export default function App(props) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
@@ -10,7 +10,20 @@ export default function App() {
       <ScrollView>
     <View style={styles.container}>
       <Image style={styles.image} source={require("../../assets/images/logo.png")} />
-
+      <View style={styles.accountsForm}>
+          <View style={styles.loginSign}>
+            <TouchableOpacity style={styles.loginSignBtn1} onPress={() =>{
+                  props.navigation.navigate("Login")
+              }}>
+                <Text style={styles.loginText}>LOGIN</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.loginSign}>
+            <TouchableOpacity style={styles.loginSignBtn2} >
+                <Text style={styles.loginText}>REGISTRATION</Text>
+            </TouchableOpacity>
+          </View>
+      </View>
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
@@ -40,14 +53,16 @@ export default function App() {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Password."
+          placeholder="Confirm Password."
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
         />
       </View>
  
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity style={styles.loginBtn} onPress={() =>{
+            props.navigation.navigate("Home")
+        }}>
         <Text style={styles.textLogin}>Sign Up</Text>
       </TouchableOpacity>
     </View>
@@ -76,6 +91,24 @@ const styles = StyleSheet.create({
   loginSign:{
       width: "50%"
   },
+  loginSignBtn2:{
+    width: "85%",
+    borderRadius: 10,
+    height: 45,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    backgroundColor: "#c4c3e8",
+  },
+  loginSignBtn1:{
+    width: "85%",
+    borderRadius: 10,
+    height: 45,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    backgroundColor: "#f5f0f0",
+  },
   image: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -99,7 +132,7 @@ const styles = StyleSheet.create({
   TextInput: {
     height: 50,
     flex: 1,
-    padding: 10,
+    padding: 5,
   },
  
   forgot_button: {

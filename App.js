@@ -6,6 +6,8 @@ import Welcome from "./src/Components/Welcome";
 import FaceScan from "./src/Components/FaceScan";
 import AccountsEntry from "./src/Components/AccountsEntry";
 import RegistrationHome from "./src/Components/RegistrationHome";
+// import MobileOTP from './src/Components/OTP/MobileOTP';
+import NavigationTab from "./src/Components/Navigation/NavigationTab";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +22,9 @@ const App = () => {
         />
         <Stack.Screen name="Login" component={AccountsEntry} />
         <Stack.Screen name="Registration" component={RegistrationHome} />
+        <Stack.Screen name="Home" component={NavigationTab} />
         <Stack.Screen name="Face Scan" component={FaceScan} />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

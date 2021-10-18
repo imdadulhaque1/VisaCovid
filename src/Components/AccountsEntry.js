@@ -12,13 +12,13 @@ export default function App(props) {
 
       <View style={styles.accountsForm}>
           <View style={styles.loginSign}>
-            <TouchableOpacity style={styles.loginSignBtn}>
+            <TouchableOpacity style={styles.loginSignBtn1}>
                 <Text style={styles.loginText}>LOGIN</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.loginSign}>
-            <TouchableOpacity style={styles.loginSignBtn} onPress={() =>{
-                  props.navigation.navigate("Registration")
+            <TouchableOpacity style={styles.loginSignBtn2} onPress={() =>{
+                props.navigation.navigate("Registration")
               }}>
                 <Text style={styles.loginText}>REGISTRATION</Text>
             </TouchableOpacity>
@@ -48,7 +48,9 @@ export default function App(props) {
         <Text style={styles.forgot_button}>Forgot Password?</Text>
       </TouchableOpacity>
  
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity style={styles.loginBtn} onPress={() =>{
+          props.navigation.navigate("Home")
+        }}>
         <Text style={styles.textLogin}>LOGIN</Text>
       </TouchableOpacity>
     </View>
@@ -104,7 +106,7 @@ const styles = StyleSheet.create({
     height: 30,
     marginBottom: 10,
   },
-  loginSignBtn:{
+  loginSignBtn2:{
     width: "85%",
     borderRadius: 10,
     height: 45,
@@ -112,6 +114,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 20,
     backgroundColor: "#f5f0f0",
+  },
+  loginSignBtn1:{
+    width: "85%",
+    borderRadius: 10,
+    height: 45,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    backgroundColor: "#c4c3e8",
   },
  
   loginBtn: {
