@@ -9,6 +9,8 @@ import RegistrationHome from "./src/Components/RegistrationHome";
 // import MobileOTP from './src/Components/OTP/MobileOTP';
 import NavigationTab from "./src/Components/Navigation/NavigationTab";
 
+import AddCountry from "./src/Components/Home/HomeComponents/AddCountry/AddCountry";
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -24,6 +26,8 @@ const App = () => {
         <Stack.Screen name="Registration" component={RegistrationHome} />
         <Stack.Screen name="Home" component={NavigationTab} />
         <Stack.Screen name="Face Scan" component={FaceScan} />
+
+        <Stack.Screen name="Add Country" component={AddCountry} />
         
       </Stack.Navigator>
     </NavigationContainer>
