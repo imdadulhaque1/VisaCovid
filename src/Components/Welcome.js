@@ -10,7 +10,7 @@ const Welcome = (props) => {
              <View>
                  <View>
                      <TouchableOpacity onPress={() =>{
-                         props.navigation.navigate("Face Scan")
+                         props.navigation.navigate("Login")
                      }}>
                          <Image style={styles.logo}
                                 source={logo}
@@ -36,14 +36,14 @@ const styles = StyleSheet.create({
    logo: {
        justifyContent: 'center',
        alignItems: 'center',
-       height:  200,
-       width: 330,
-       marginTop:50,
+       height:  280,
+       width: 230,
+       marginLeft: "25%",
+       marginTop: 30
    },
    background:{
        width: '100%',
-       marginTop:50,
-       height: 450
+       height: 450,
 
    }
 })

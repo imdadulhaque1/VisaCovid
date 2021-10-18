@@ -1,9 +1,8 @@
 import * as React from "react";
-import { Avatar, Button, Card } from "react-native-paper";
+import { Button, Card } from "react-native-paper";
 import { TouchableOpacity, StyleSheet, View, Text } from "react-native";
+import Icon from 'react-native-vector-icons/FontAwesome';
 import NID from "../../assets/images/face.png";
-
-const LeftContent = (props) => <Avatar.Icon {...props} icon="folder" />;
 
 const FaceScan = (props) => {
   return(
@@ -14,6 +13,7 @@ const FaceScan = (props) => {
         <Card.Actions style={styles.nidActions}>
           <TouchableOpacity>
             <Button labelStyle={{ fontSize: 35 }} icon="swap-horizontal"/>
+            {/* <Icon name="rocket" size={30} color="#900" />; */}
           </TouchableOpacity>
           <TouchableOpacity>
             <Button labelStyle={{ fontSize: 35 }} icon="camera"/>
@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
     },
     personNID:{
     height:  210,
-    width: 351,
+    width: 370,
+    marginLeft: 10
 
     },
     nidActions:{
