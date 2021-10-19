@@ -35,7 +35,9 @@ const Home = (props) =>{
                   flexDirection: "row",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginTop: -80
+                  marginTop: -80,
+                  marginLeft: 6,
+                  width: "95%"
                 }}
               >
                 <Card style={styles.dataFlex}>
@@ -58,6 +60,8 @@ const Home = (props) =>{
                           alignItems: "center",
                           flex: 1,
                           justifyContent: "space-between",
+                          marginTop: 10,
+                          marginRight: -30
                         }}
                         icon="information-outline"
                       />
@@ -95,6 +99,8 @@ const Home = (props) =>{
                           justifyContent: "center",
                           padding: 5,
                           marginLeft: 40,
+                          marginRight: -30,
+                          marginTop: 10
                         }}
                         icon="information-outline"
                       />
@@ -115,7 +121,9 @@ const Home = (props) =>{
                   flexDirection: "row",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginBottom: 10
+                  marginBottom: 10,
+                  marginLeft: 6,
+                  width: "95%"
                 }}
               >
                 <Card style={styles.dataFlex}>
@@ -140,6 +148,8 @@ const Home = (props) =>{
                           justifyContent: "center",
                           padding: 5,
                           marginLeft: 0,
+                          marginTop: 10,
+                          marginRight: -30
                         }}
                         icon="information-outline"
                       />
@@ -174,6 +184,8 @@ const Home = (props) =>{
                           justifyContent: "center",
                           padding: 5,
                           marginLeft: 0,
+                          marginTop:10,
+                          marginRight: -30
                         }}
                         icon="information-outline"
                       />
@@ -217,6 +229,8 @@ const Home = (props) =>{
                           justifyContent: "center",
                           padding: 5,
                           marginLeft: 10,
+                          marginTop: 15,
+                          marginRight: -30
                         }}
                         icon="information-outline"
                       />

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Button, Dimensions, FlatList, ScrollView  } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView  } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 
 const VaccineRegistration = (props) => {
@@ -144,14 +144,7 @@ const styles = StyleSheet.create({
         width: "95%",
         backgroundColor: "#2e47e8",
         borderRadius: 10
-    },
-    // pickerItem:{
-    //     borderRadius: 10,
-    //     borderColor: "#d9b555",
-    //     backgroundColor: "#ebecf2",
-    //     width: "100%",
-    //     fontSize: 20
-    // }
+    }
 
 })
 

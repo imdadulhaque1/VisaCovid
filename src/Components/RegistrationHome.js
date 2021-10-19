@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ScrollView } from "react-native";
 
 export default function App(props) {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
@@ -27,7 +28,15 @@ export default function App(props) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Email."
+          placeholder="Full Name"
+          placeholderTextColor="#003f5c"
+          onChangeText={(name) => setName(name)}
+        />
+      </View>
+      <View style={styles.inputView}>
+        <TextInput
+          style={styles.TextInput}
+          placeholder="Email"
           placeholderTextColor="#003f5c"
           onChangeText={(email) => setEmail(email)}
         />
@@ -35,7 +44,7 @@ export default function App(props) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Phone Number."
+          placeholder="Phone Number"
           placeholderTextColor="#003f5c"
           onChangeText={(phone) => setPhone(phone)}
         />
@@ -44,7 +53,7 @@ export default function App(props) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Password."
+          placeholder="Password"
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
@@ -53,7 +62,7 @@ export default function App(props) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Confirm Password."
+          placeholder="Confirm Password"
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
@@ -77,7 +86,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 10,
-    marginTop: 50
   },
   accountsForm:{
       flexDirection: "row",
@@ -114,7 +122,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height:  280,
     width: 230,
-    marginTop: -50,
     marginBottom: 30
   },
  

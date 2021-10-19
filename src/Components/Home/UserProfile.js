@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, } from "react-native";
-import {Card} from "react-native-paper";
-
+import {Button, Card} from "react-native-paper";
+import Icon from 'react-native-vector-icons/FontAwesome';
 import AntibodyLogo from "../../../assets/images/userProfileLogoImg.jpg";
 
 const UserProfile = (props) => {
@@ -18,6 +18,16 @@ const UserProfile = (props) => {
         </View>
 
         <Card style={styles.cardStyle}>
+          <View style={styles.subscribtionBtn}>
+            <View style={{width: "60%", justifyContent: "center", alignItems: 'center', marginLeft: 20}}>
+              <TouchableOpacity style={styles.subscribtionBtnMain} onPress={() =>{
+                  props.navigation.navigate("")
+                }}>
+                  <Text style={styles.PaymentText}>Subscribe Now</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+          
           <View style={{ paddingTop: 10 }}>
             <Text style={styles.testStyle}>COVID-19 Antibody</Text>
             <View
@@ -93,13 +103,28 @@ const UserProfile = (props) => {
               <Text style={styles.testStartItem}>Vaccine center</Text>
               <Text style={styles.testEndItem}>No data</Text>
             </View>
-            <View style={styles.testContentEdit}>
-              <TouchableOpacity onPress={() => {
-                props.navigation.navigate("Personal Information");
-              }}>
-                <Text style={{ color: "blue" }}>Edit Personal Information</Text>
-              </TouchableOpacity>
-            </View>
+            
+          </View>
+          <View style={styles.accountsForm}>
+              <View style={styles.editInfo}>
+                <View style={styles.editInerView}>
+                  <TouchableOpacity style={{marginTop:20, marginLeft: 15, justifyContent: "center", alignItems: "center"}} onPress={() =>{
+                    props.navigation.navigate("Personal Information")
+                  }}>
+                    <Icon name="edit" size={30} color="#2d28b5" solid />
+                  </TouchableOpacity>
+                  <TouchableOpacity style={styles.loginSignBtn1}>
+                    <Text style={styles.editBtnText}>Edit Personal Data</Text>
+                </TouchableOpacity>
+                </View>
+              </View>
+              <View style={styles.logoutUser}>
+                <TouchableOpacity style={styles.loginSignBtn2} onPress={() =>{
+                    props.navigation.navigate("Login")
+                  }}>
+                    <Text style={styles.PaymentText}>Log Out</Text>
+                </TouchableOpacity>
+              </View>
           </View>
         </Card>
       </View>
@@ -134,9 +159,10 @@ const styles = StyleSheet.create({
     padding: 10,
     marginTop: 50,
     backgroundColor: "white",
-    width: "90%",
+    width: "97%",
     height: "auto",
     borderRadius: 8,
+    marginBottom: -50
   },
   testStyle: {
     flex: 1,
@@ -171,7 +197,78 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingTop: 10,
     marginTop: 30
-  }
+  },
+  subscribtionBtn:{
+    flexDirection: "row",
+    justifyContent: 'center',
+    width: "100%",
+    marginBottom: 10,
+    marginTop: -10
+
+  },
+  subscribtionBtnMain:{
+    width: "99%",
+    borderRadius: 10,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    backgroundColor: "#00559D",
+    marginLeft: -30
+  },
+  accountsForm:{
+    flexDirection: "row",
+    justifyContent: 'space-between',
+    width: "95%",
+    padding: 1,
+    margin: 10
+
+  },
+  editInfo:{
+    width: "50%",
+    justifyContent: 'center',
+    alignItems: 'center',
+
+  },
+  editInerView:{
+    flexDirection: "row",
+    width: "100%",
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  logoutUser:{
+    width: "35%",
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 5
+  },
+  editBtnText:{
+    color: "#121011"
+  },
+  PaymentText:{
+    color: "#ffffff"
+  },
+  textLogin:{
+    color: "#ffffff"
+  },
+  loginSignBtn2:{
+    width: "99%",
+    borderRadius: 10,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    backgroundColor: "#9c061f",
+  },
+  loginSignBtn1:{
+    width: "100%",
+    borderRadius: 10,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    backgroundColor: "#ffffff",
+  },
 });
 
 export default UserProfile;

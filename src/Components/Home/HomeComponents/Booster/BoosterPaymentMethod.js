@@ -84,13 +84,20 @@ const BoosterPaymentMethod = (props) => {
                     </View>
                   </View>
                 </Card.Content>
-                <View style={{ justifyContent: 'center', alignItems: 'center', width:"100%", marginTop: 30}}>
-            <TouchableOpacity style={styles.button} onPress={() => {
-                props.navigation.navigate("Artboard");
-            }}>
-                <Text style={{textAlign:"center", color: "white", fontSize: 20}}>Make Payment</Text>
-            </TouchableOpacity>
-          </View>
+                <View style={styles.accountsForm}>
+                  <View style={styles.loginSign}>
+                    <TouchableOpacity style={styles.loginSignBtn1}>
+                        <Text style={styles.PaymentText}>Subscribe Later</Text>
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.loginSign}>
+                    <TouchableOpacity style={styles.loginSignBtn2} onPress={() =>{
+                        props.navigation.navigate("Artboard")
+                      }}>
+                        <Text style={styles.PaymentText}>Make Payment</Text>
+                    </TouchableOpacity>
+                  </View>
+              </View>
               </Card>
             );
           })}
@@ -142,14 +149,6 @@ const styles = StyleSheet.create({
     height: 100,
     marginTop: 40,
   },
-  button: {
-    justifyContent: "center",
-    alignItems: "center",
-    height: 70,
-    width: "90%",
-    backgroundColor: "#224fe3",
-    borderRadius: 10
-  },
   input: {
     height: 60,
     marginTop: 12,
@@ -186,7 +185,44 @@ const styles = StyleSheet.create({
     backgroundColor: "#e9ecf0",
     borderRadius: 10,
     justifyContent: "flex-end",
-  }
+  },
+  accountsForm:{
+    flexDirection: "row",
+    justifyContent: 'space-between',
+    width: "100%",
+    padding: 1,
+    marginBottom: 10,
+    marginLeft: 15
+
+  },
+  loginSign:{
+      width: "50%"
+  },
+  PaymentText:{
+    color: "#ffffff"
+  },
+  textLogin:{
+    color: "#ffffff"
+  },
+  loginSignBtn2:{
+    width: "99%",
+    borderRadius: 10,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    backgroundColor: "#00559D",
+    marginLeft: -30
+  },
+  loginSignBtn1:{
+    width: "80%",
+    borderRadius: 10,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    backgroundColor: "#c4c3e8",
+  },
 
 });
 
