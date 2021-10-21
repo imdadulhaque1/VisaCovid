@@ -25,7 +25,7 @@ const Antibody = () => {
 
               <View style={styles.testContents}>
                 <View style={styles.testStartItem}>
-                  <Paragraph>{val.result}</Paragraph>
+                  <Paragraph style={styles.itemColor}>{val.result}</Paragraph>
                   <Paragraph>{val.testDate}</Paragraph>
                   <Paragraph>{val.antibodyLeft}</Paragraph>
                   <Paragraph>{val.testCenter}</Paragraph>
@@ -99,6 +99,9 @@ const styles = StyleSheet.create({
     height: 70,
     width: 125,
   },
+  itemColor:{
+    color: "#050505"
+  }
 });
 
 export default Antibody;

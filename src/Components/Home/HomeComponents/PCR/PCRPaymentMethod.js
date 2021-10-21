@@ -59,6 +59,7 @@ const PCRPaymentMethod = (props) => {
                       onChangeText={onChangeNumber}
                       value={number}
                       placeholder="Card Number"
+                      placeholderTextColor="#a0a2a3" 
                       keyboardType="numeric"
                     />
                     <TextInput
@@ -66,6 +67,7 @@ const PCRPaymentMethod = (props) => {
                       onChangeText={onChangeText}
                       value={text}
                       placeholder="Add Card Details"
+                      placeholderTextColor="#a0a2a3" 
                     />
                     <View style={{flexDirection: "row",  justifyContent: "space-between"}}>
                       <TextInput
@@ -73,12 +75,14 @@ const PCRPaymentMethod = (props) => {
                         onChangeText={onChangeCCV}
                         value={ccv}
                         placeholder="CCV"
+                        placeholderTextColor="#a0a2a3" 
                       />
                       <TextInput
                         style={styles.dateInputDetails}
                         onChangeText={onChangeDate}
                         value={date}
                         placeholder="Expired Date"
+                        placeholderTextColor="#a0a2a3" 
                       />
 
                     </View>

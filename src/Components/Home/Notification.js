@@ -11,16 +11,16 @@ return (
 return (
         <Card style={styles.cardStyle}>
         <Card.Content>
-                <Title style={{fontSize: 25}}>{val.title}</Title>
-                <Paragraph style={{fontSize: 19}}>{val.statusDetails}</Paragraph>
-                <Paragraph style={{color: "gray", margin: 5, fontSize: 19}}>{val.time}</Paragraph>
-                <View
-                            style={{
-                            borderBottomColor: "#e8e2e1",
-                            borderBottomWidth: 2,
-                            marginTop: 2,
-                            }}
-                />
+            <Title style={{fontSize: 20}}>{val.title}</Title>
+            <Paragraph style={{fontSize: 16}}>{val.statusDetails}</Paragraph>
+            <Paragraph style={{color: "gray", margin: 5, fontSize: 16}}>{val.time}</Paragraph>
+            <View
+                style={{
+                borderBottomColor: "#e8e2e1",
+                borderBottomWidth: 2,
+                marginTop: 2,
+                }}
+            />
         </Card.Content>
         </Card>
         );

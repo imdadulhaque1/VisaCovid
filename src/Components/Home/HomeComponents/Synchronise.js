@@ -20,8 +20,8 @@ const Synchronise = (props) => {
             <Card style={styles.cardStyleCovidVisa}>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between', padding: 20}}>
                     <View style={{flexDirection:"column", justifyContent: "flex-start", padding: 10}}>
-                        <Text style={{fontSize: 30, fontWeight: 'bold' }}>Be Aware</Text> 
-                        <Text>United against COVID-19</Text>
+                        <Text style={{fontSize: 30, fontWeight: 'bold', color: "#050505" }}>Be Aware</Text> 
+                        <Text style={{ color: "#050505" }}>United against COVID-19</Text>
                     </View>
                     <View style={{justifyContent: "flex-end", height: 100}}>
                         <Image style={styles.ImageShow} source={BeAware} /> 
@@ -35,8 +35,8 @@ const Synchronise = (props) => {
             <Card style={styles.cardStyleSurokkha}>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between', padding: 20}}>
                     <View style={{flexDirection:"column", justifyContent: "flex-start", padding: 10}}>
-                        <Text style={{fontSize: 30, fontWeight: 'bold' }}>Surokkha</Text> 
-                        <Text>United against COVID-19</Text>
+                        <Text style={{fontSize: 30, fontWeight: 'bold', color: "#050505" }}>Surokkha</Text> 
+                        <Text style={{ color: "#050505" }}>United against COVID-19</Text>
                     </View>
                     <View style={{justifyContent: "flex-end", height: 100}}>
                         <Image style={styles.ImageShow} source={BeAware} /> 
@@ -60,7 +60,7 @@ const Synchronise = (props) => {
                         onPress={() => {
                             setPersonalDataChecked(!personalDataChecked);
                         }}
-                    /><Text style={{fontSize:18}}>Personal Data</Text>
+                    /><Text style={styles.checkData}>Personal Data</Text>
                 </View>
 
                 <View style={{flexDirection: "row", width:"80%", marginLeft: 10, padding: 2}}>
@@ -69,7 +69,7 @@ const Synchronise = (props) => {
                         onPress={() => {
                             setDiagnosisDataChecked(!diagnosisDataChecked);
                         }}
-                    /><Text style={{fontSize:18}}>Diagnosis Data</Text>
+                    /><Text style={styles.checkData}>Diagnosis Data</Text>
                 </View>
 
                 <View style={{flexDirection: "row", width:"80%", marginLeft: 10, padding: 2}}>
@@ -78,7 +78,7 @@ const Synchronise = (props) => {
                         onPress={() => {
                             setPCRDataChecked(!PCRDataChecked);
                         }}
-                    /><Text style={{fontSize:18}}>PCR Data</Text>
+                    /><Text style={styles.checkData}>PCR Data</Text>
                 </View>
 
                 <View style={{flexDirection: "row", width:"80%", marginLeft: 10, padding: 2}}>
@@ -87,7 +87,7 @@ const Synchronise = (props) => {
                         onPress={() => {
                             setVaccinationDataChecked(!vaccinationDataChecked);
                         }}
-                    /><Text style={{fontSize:18}}>Vaccination Data</Text>
+                    /><Text style={styles.checkData}>Vaccination Data</Text>
                 </View>
 
                 <View style={{flexDirection: "row", width:"80%", marginLeft: 10, padding: 2}}>
@@ -96,7 +96,7 @@ const Synchronise = (props) => {
                         onPress={() => {
                             setBiometricDataChecked(!biometricDataChecked);
                         }}
-                    /><Text style={{fontSize:18}}>Biometric Data</Text>
+                    /><Text style={styles.checkData}>Biometric Data</Text>
                 </View>
 
             </View>
@@ -154,6 +154,11 @@ const styles = StyleSheet.create({
         width: "90%",
         marginLeft: 10,
         padding: 5
+    },
+    checkData:{
+        fontSize:18,
+        color: "#050505",
+        marginTop: 5
     },
     downloadInstallStyle:{
         width: "90%",

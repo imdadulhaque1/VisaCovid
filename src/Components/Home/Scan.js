@@ -14,7 +14,7 @@ const UserProfile = (props) => {
         <Image style={styles.AntibodyLogoImg} source={AntibodyLogo} />
         <View style={styles.UserID}>
           <View style={styles.UserIdStart}>
-          <Text style={{ width: "100%", marginLeft: "27%"}}>ID: <Text style={{fontWeight: "bold", padding: 10}}>954 322 541</Text> </Text>
+          <Text style={{ width: "100%", marginLeft: "27%", color: "#050505"}}>ID: <Text style={{fontWeight: "bold", padding: 10}}>954 322 541</Text> </Text>
           </View>
         </View>
       </View>
@@ -135,9 +135,11 @@ const styles = StyleSheet.create({
   },
   testStyle: {
     flex: 1,
-    fontSize: 18,
+    fontSize: 20,
     justifyContent: "flex-start",
     paddingTop: 10,
+    color: "#050505",
+    fontWeight: "bold"
   },
   testContents: {
     flex: 1,
@@ -145,12 +147,19 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingTop: 5,
   },
+  testStartItem:{
+    color: "#050505",
+    fontWeight: "bold"
+  },
+  testEndItem:{
+    color: "#050505",
+  },
   UserID: {
     flex: 1,
     justifyContent: "center",
     flexDirection: "row",
     padding: 5,
-    marginBottom: 20,
+    marginBottom: 5,
     height: 50,
     width: "80%",
   },

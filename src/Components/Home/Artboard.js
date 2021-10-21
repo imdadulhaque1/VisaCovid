@@ -6,7 +6,7 @@ import BeAware from "../../../assets/images/BeAware.png";
 import Scan from "../../../assets/images/scan.png";
 import Battery from "../../../assets/images/battery.png";
 import PCRTest from "../../../assets/images/done.png";
-import Vaccination from "../../../assets/images/Vaccination.jpeg"
+import Vaccination from "../../../assets/images/Vaccination.png"
 import ArtboardData from './MadeData/ArtboardData';
 
 const ArtBoard = () => {
@@ -60,8 +60,8 @@ const ArtBoard = () => {
                     <View style={{flexDirection: "column", width: "40%", justifyContent:"center", alignContent: "center", padding: 10}}>
                         <Card.Cover style={{width: 130, height: 100, marginLeft: -10, borderRadius: 10}}  source={Scan} />
                         <View style={{flexDirection: "row", marginLeft: -10, }}>
-                            <Text style={{fontWeight: "bold"}}>ID: </Text>
-                            <Text>954 322 541</Text>
+                            <Text style={{fontWeight: "bold", color:"#050505"}}>ID: </Text>
+                            <Text style={{ color:"#050505"}}>954 322 541</Text>
                         </View>
                     </View>
                 </View>
@@ -70,25 +70,25 @@ const ArtBoard = () => {
                     <View style={{flexDirection: "row"}}>
                         <TouchableOpacity style={{width: "50%", height: 120, justifyContent: "center", alignContent: "center"}}>
                             <Card style={{width: "100%", height: 120, justifyContent: "center", alignContent: "center"}}>
-                                <Card.Cover style={{width: 140, height: 80, marginTop: 20, marginLeft:15, borderRadius: 10, justifyContent: "center", alignContent: "center"}} source={Battery} />
+                                <Card.Cover style={styles.batteryIcon} source={Battery} />
                             </Card>
                         </TouchableOpacity>
-                        <View style={{flexDirection: "column", justifyContent: "center", marginLeft: 15}}>
-                            <Text style={{fontWeight: "bold"}}>Natural Antibody</Text>
-                            <Text>Recovered at <Text style={{fontWeight: "bold"}}>21-03-2021</Text></Text>
-                            <Text>Antibody left <Text style={{fontWeight: "bold"}}> 55 </Text>days</Text>
+                        <View style={{flexDirection: "column", justifyContent: "center", marginLeft: 15, color: "#050505"}}>
+                            <Text style={{fontWeight: "bold", color: "#050505"}}>Natural Antibody</Text>
+                            <Text style={styles.dataStatus}>Recovered at <Text style={{fontWeight: "bold", color: "#050505"}}>21-03-2021</Text></Text>
+                            <Text style={styles.dataStatus}>Antibody left <Text style={{fontWeight: "bold", color: "#050505"}}> 55 </Text>days</Text>
                         </View>
                     </View>
 
                     <View style={{flexDirection: "row", marginTop: 20}}>
                     <View style={{width: "46%", flexDirection: "column", justifyContent: "center", marginLeft: 15}}>
-                            <Text style={{fontWeight: "bold"}}>Vaccinated</Text>
-                            <Text>Moderna</Text>
-                            <Text>Date: <Text style={{fontWeight: "bold"}}> 12-06-2021 </Text></Text>
+                            <Text style={styles.dataStatus}>Vaccinated <Text>Moderna</Text></Text>
+                            
+                            <Text style={styles.dataStatus}>Date: <Text style={{fontWeight: "bold"}}> 12-06-2021 </Text></Text>
                         </View>
                         <TouchableOpacity style={{width: "50%", height: 120, justifyContent: "center", alignContent: "center", marginRight: 30}}>
                             <Card style={{width: "100%", height: 120, justifyContent: "center", alignContent: "center", marginRight: 20}}>
-                                <Card.Cover style={{width: 140, height: 100, marginTop: 10, marginLeft:15, borderRadius: 10, justifyContent: "center", alignContent: "center"}} source={Vaccination} />
+                                <Card.Cover style={{width: 110, height: 100, marginTop: 10, marginLeft:30, borderRadius: 10, justifyContent: "center", alignContent: "center"}} source={Vaccination} />
                             </Card>
                         </TouchableOpacity>
                         
@@ -97,29 +97,29 @@ const ArtBoard = () => {
                     <View style={{flexDirection: "row", marginTop: 20 }}>
                     <TouchableOpacity style={{width: "50%", height: 120, justifyContent: "center", alignContent: "center"}}>
                         <Card style={{width: "100%", height: 120, justifyContent: "center", alignContent: "center"}}>
-                            <Card.Cover style={{width: 140, height: 90, marginTop: 14, marginLeft:15, borderRadius: 10, justifyContent: "center", alignContent: "center"}} source={PCRTest} />
+                            <Card.Cover style={{width: 120, height: 110, marginTop: 5, marginLeft:23, borderRadius: 10, justifyContent: "center", alignContent: "center"}} source={PCRTest} />
                         </Card>
                     </TouchableOpacity>
                         <View style={{width: "50%", flexDirection: "column", justifyContent: "center", marginLeft: 15}}>
-                            <Text style={{fontWeight: "bold"}}>PCR Tested</Text>
-                            <Text>Covid Negative</Text>
-                            <Text>Date: <Text style={{fontWeight: "bold"}}> 12-06-2021 </Text></Text>
+                            <Text style={styles.dataStatus}>PCR Tested <Text>Covid Negative</Text></Text>
+                            
+                            <Text style={styles.dataStatus}>Date: <Text style={{fontWeight: "bold"}}> 12-06-2021 </Text></Text>
                         </View>
                     </View>
                 </View>
 
                 <Card>
                 <View style={{flexDirection: "column"}}>
-                    <Text style={{fontSize: 17, padding: 10}}>
+                    <Text style={{fontSize: 17, padding: 10, color:"#050505"}}>
                         The COVID-19 report of <Text>Mr Munzurul Alam</Text> is issued on <Text>12th July 2021</Text>,<Text> 01:15 PM</Text> by <Text>Kuet Moitri Hospital-1234563.</Text>
                     </Text>
-                    <Text style={{fontSize: 17, padding: 10}}>
+                    <Text style={styles.personStatus}>
                         This is report valid till <Text>14th July 2021</Text> Bangladesh time.
                     </Text>
-                    <Text style={{fontSize: 17, padding: 10}}>
+                    <Text style={styles.personStatus}>
                         For more details please scan the QR code  or enter the ID number on CovidVisa app. <Text>Thank You</Text>
                     </Text>
-                    <Text style={{fontSize: 17, padding: 10}}>
+                    <Text style={styles.personStatus}>
                         <Text>Ekramul Haque</Text> - <Text>1234321</Text>
                     </Text>
                     <Text style={{fontSize: 17, paddingBottom: 15, paddingLeft: 10, }}>Validation Officer</Text>
@@ -162,6 +162,26 @@ const styles = StyleSheet.create({
     testEndItem: {
         justifyContent: "flex-end",
     },
+    batteryIcon:{
+        width: 140,
+        height: 80,
+        marginTop: 20,
+        marginLeft:15,
+        borderRadius: 10,
+        justifyContent: "center",
+        alignContent: "center"
+    },
+    vaccinationIcon:{
+
+    },
+    dataStatus:{
+        color:"#050505"
+    },
+    personStatus:{
+        fontSize: 17,
+        padding: 10,
+        color:"#050505"
+    }
 
 })
 

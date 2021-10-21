@@ -13,14 +13,14 @@ export default function App(props) {
       <View style={styles.accountsForm}>
           <View style={styles.loginSign}>
             <TouchableOpacity style={styles.loginSignBtn1}>
-                <Text style={styles.loginText}>LOGIN</Text>
+                <Text style={styles.accountsText}>LOGIN</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.loginSign}>
             <TouchableOpacity style={styles.loginSignBtn2} onPress={() =>{
                 props.navigation.navigate("Registration")
               }}>
-                <Text style={styles.loginText}>REGISTRATION</Text>
+                <Text style={styles.accountsText}>REGISTRATION</Text>
             </TouchableOpacity>
           </View>
       </View>
@@ -74,6 +74,9 @@ const styles = StyleSheet.create({
       marginBottom: 10,
       marginLeft: 30
 
+  },
+  accountsText:{
+    color: "#050505"
   },
   loginSign:{
       width: "50%"

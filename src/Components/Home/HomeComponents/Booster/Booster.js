@@ -16,8 +16,9 @@ const Booster = (props) => {
             <View style={styles.container}>
             <View style={styles.firstView}>
                 <View style={styles.pickerAllItem}>
-                <Text style={{fontSize: 19, fontWeight: 'bold'}}>Select a Country</Text>
+                <Text style={styles.checkTitle}>Select a Country</Text>
                     <Picker
+                        style={styles.checkItemColor}
                         selectedValue={selectedFirstItem}
                         onValueChange={(itemValue, itemIndex) =>
                             setSelectedFirstItem(itemValue)
@@ -29,8 +30,9 @@ const Booster = (props) => {
                     </Picker>
                 </View>
                 <View style={styles.pickerAllItem}>
-                    <Text style={{fontSize: 19, fontWeight: 'bold'}}>Select a City</Text>
+                    <Text style={styles.checkTitle}>Select a City</Text>
                     <Picker
+                        style={styles.checkItemColor}
                         selectedValue={selectedSecondItem}
                         onValueChange={(itemValue, itemIndex) =>
                             setSelectedSecondItem(itemValue)
@@ -43,8 +45,9 @@ const Booster = (props) => {
                 </View>
 
                 <View style={styles.pickerAllItem}>
-                    <Text style={{fontSize: 19, fontWeight: 'bold'}}>Select a Zone</Text>
+                    <Text style={styles.checkTitle}>Select a Zone</Text>
                     <Picker
+                        style={styles.checkItemColor}
                         selectedValue={selectedThirdItem}
                         onValueChange={(itemValue, itemIndex) =>
                             setSelectedThirdItem(itemValue)
@@ -57,8 +60,9 @@ const Booster = (props) => {
                 </View>
 
                 <View style={styles.pickerAllItem}>
-                    <Text style={{fontSize: 19, fontWeight: 'bold'}}>Select a center for PCR Test</Text>
+                    <Text style={styles.checkTitle}>Select a center for PCR Test</Text>
                     <Picker
+                        style={styles.checkItemColor}
                         selectedValue={selectedFourItem}
                         onValueChange={(itemValue, itemIndex) =>
                             setSelectedFourItem(itemValue)
@@ -71,8 +75,9 @@ const Booster = (props) => {
                 </View>
 
                 <View style={styles.pickerAllItem}>
-                    <Text style={{fontSize: 19, fontWeight: 'bold'}}>Select a Date</Text>
+                    <Text style={styles.checkTitle}>Select a Date</Text>
                     <Picker
+                        style={styles.checkItemColor}
                         selectedValue={selectedFiveItem}
                         onValueChange={(itemValue, itemIndex) =>
                             setSelectedFiveItem(itemValue)
@@ -147,6 +152,15 @@ const styles = StyleSheet.create({
         backgroundColor: "#2e47e8",
         borderRadius: 10
     },
+    checkTitle:{
+        fontSize:18,
+        color: "#050505",
+        marginTop: 5,
+        fontWeight: 'bold'
+    },
+    checkItemColor:{
+        color: "#050505"
+    }
     // pickerItem:{
     //     borderRadius: 10,
     //     borderColor: "#d9b555",

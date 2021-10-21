@@ -17,11 +17,6 @@ const Welcome = (props) => {
                          />
                          
                      </TouchableOpacity>
-                     <View>
-                     <Image style={styles.background}
-                                source={background}
-                         />
-                     </View>
                  </View>
              </View>
          );
@@ -39,13 +34,13 @@ const styles = StyleSheet.create({
         height:  250,
         width: 200,
         marginBottom: 5,
-        marginTop: 20,
+        marginTop: "50%",
         marginLeft: 80
    },
-   background:{
-       width: '100%',
-       height: 450,
+//    background:{
+//        width: '100%',
+//        height: 450,
 
-   }
+//    }
 })
 export default Welcome;

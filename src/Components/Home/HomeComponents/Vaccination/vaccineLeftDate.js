@@ -20,7 +20,7 @@ const vaccineLeftDate = (props) => {
                 </View>
                 <Card style={{paddingRight: 20, marginTop: 30}}>
                     <View style={styles.pickLocation}>
-                        <Text style={{fontSize: 20}}>House 24, Road 03, Sector 04, Uttara Dhaka, Bangladesh</Text>
+                        <Text style={{fontSize: 20, color: "#050505"}}>House 24, Road 03, Sector 04, Uttara Dhaka, Bangladesh</Text>
                     </View>
                 </Card>
                 <TouchableOpacity style={styles.button} onPress={() => {
@@ -46,7 +46,9 @@ const styles = StyleSheet.create({
         fontSize: 20,
         justifyContent: 'center',
         textAlign: "center",
-        padding: 20
+        padding: 20,
+        color: "#a0a2a3",
+        fontWeight: "bold"
     },
     dateTimesStatus:{
         width: "90%",

@@ -59,6 +59,7 @@ const VaccinePaymentMethod = (props) => {
                       onChangeText={onChangeNumber}
                       value={number}
                       placeholder="Card Number"
+                      placeholderTextColor="#a0a2a3" 
                       keyboardType="numeric"
                     />
                     <TextInput
@@ -66,6 +67,7 @@ const VaccinePaymentMethod = (props) => {
                       onChangeText={onChangeText}
                       value={text}
                       placeholder="Add Card Details"
+                      placeholderTextColor="#a0a2a3"
                     />
                     <View style={{flexDirection: "row",  justifyContent: "space-between"}}>
                       <TextInput
@@ -73,12 +75,14 @@ const VaccinePaymentMethod = (props) => {
                         onChangeText={onChangeCCV}
                         value={ccv}
                         placeholder="CCV"
+                        placeholderTextColor="#a0a2a3"
                       />
                       <TextInput
                         style={styles.dateInputDetails}
                         onChangeText={onChangeDate}
                         value={date}
                         placeholder="Expired Date"
+                        placeholderTextColor="#a0a2a3"
                       />
 
                     </View>
@@ -156,6 +160,7 @@ const styles = StyleSheet.create({
     marginTop: 250,
     fontSize: 20,
     backgroundColor: "#e9ecf0",
+    color: "#050505",
     borderRadius: 10
   },
   inputDetails:{
@@ -164,6 +169,7 @@ const styles = StyleSheet.create({
     padding: 20,
     fontSize: 20,
     backgroundColor: "#e9ecf0",
+    color: "#050505",
     borderRadius: 10
   },
   ccvInput: {
@@ -173,6 +179,7 @@ const styles = StyleSheet.create({
     padding: 20,
     fontSize: 20,
     backgroundColor: "#e9ecf0",
+    color: "#050505",
     borderRadius: 10,
     justifyContent: "space-between",
   },
@@ -183,6 +190,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 20,
     backgroundColor: "#e9ecf0",
+    color: "#050505",
     borderRadius: 10,
     justifyContent: "flex-end",
   },

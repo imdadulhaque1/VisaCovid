@@ -13,7 +13,7 @@ const UserProfile = (props) => {
         <View style={styles.AntibodyLogo}>
           <Image style={styles.AntibodyLogoImg} source={AntibodyLogo} />
           <View style={styles.UserID}>
-            <Text style={{ width: "100%", marginLeft: "27%"}}>ID: <Text style={{fontWeight: "bold", padding: 10}}>954 322 541</Text> </Text>
+            <Text style={{ width: "100%", marginLeft: "27%",color: "#050505" }}>ID: <Text style={{fontWeight: "bold", padding: 10}}>954 322 541</Text> </Text>
           </View>
         </View>
 
@@ -28,7 +28,7 @@ const UserProfile = (props) => {
             </View>
           </View>
           
-          <View style={{ paddingTop: 10 }}>
+          <View style={{ paddingTop: 20 }}>
             <Text style={styles.testStyle}>COVID-19 Antibody</Text>
             <View
               style={{
@@ -107,16 +107,13 @@ const UserProfile = (props) => {
           </View>
           <View style={styles.accountsForm}>
               <View style={styles.editInfo}>
-                <View style={styles.editInerView}>
-                  <TouchableOpacity style={{marginTop:20, marginLeft: 15, justifyContent: "center", alignItems: "center"}} onPress={() =>{
-                    props.navigation.navigate("Personal Information")
-                  }}>
+                <TouchableOpacity style={styles.editInerView} onPress={() =>{
+                    props.navigation.navigate("Personal Information")}}>
+
                     <Icon name="edit" size={30} color="#2d28b5" solid />
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.loginSignBtn1}>
                     <Text style={styles.editBtnText}>Edit Personal Data</Text>
+                    
                 </TouchableOpacity>
-                </View>
               </View>
               <View style={styles.logoutUser}>
                 <TouchableOpacity style={styles.loginSignBtn2} onPress={() =>{
@@ -169,12 +166,19 @@ const styles = StyleSheet.create({
     fontSize: 18,
     justifyContent: "flex-start",
     paddingTop: 10,
+    color: "#050505"
   },
   testContents: {
     flex: 1,
     justifyContent: "space-between",
     flexDirection: "row",
     paddingTop: 5,
+  },
+  testStartItem:{
+    color: "#050505"
+  },
+  testEndItem:{
+    color: "#050505"
   },
   UserID: {
     justifyContent: "center",
@@ -225,9 +229,9 @@ const styles = StyleSheet.create({
 
   },
   editInfo:{
-    width: "50%",
+    width: "60%",
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center', 
 
   },
   editInerView:{
@@ -235,6 +239,11 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: 'space-between',
     alignItems: 'center',
+    borderWidth: 2,
+    borderColor: "#050505",
+    borderRadius: 10,
+    marginTop: 20,
+    padding: 6
   },
   logoutUser:{
     width: "35%",
@@ -243,7 +252,8 @@ const styles = StyleSheet.create({
     margin: 5
   },
   editBtnText:{
-    color: "#121011"
+    color: "#121011",
+    marginTop: 5,
   },
   PaymentText:{
     color: "#ffffff"

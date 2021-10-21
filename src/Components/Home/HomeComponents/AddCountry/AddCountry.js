@@ -11,8 +11,10 @@ const AddCountry = (props) => {
     return (
             <Card style={styles.container}>
                 <View style={styles.itemView}>
-                    <Text style={{fontSize: 19, fontWeight: 'bold'}}>From</Text>
+                    <Text style={{fontSize: 19, fontWeight: 'bold', color: "#050505"}}>From</Text>
                     <Picker
+                    itemStyle={{color:'#050505'}}
+                    style={{color: "#050505", backgroundColor: '#e1e8eb'}}
                         selectedValue={fromAddress}
                         onValueChange={(itemValue, itemIndex) =>
                             setfromAddress(itemValue)
@@ -29,8 +31,9 @@ const AddCountry = (props) => {
                 </View>
 
                 <View style={styles.itemView}>
-                    <Text style={{fontSize: 19, fontWeight: 'bold'}}>To</Text>
+                    <Text style={{fontSize: 19, fontWeight: 'bold', color: "#050505"}}>To</Text>
                     <Picker
+                        style={{color: "#050505", backgroundColor: '#e1e8eb'}}
                         selectedValue={toAddress}
                         onValueChange={(itemValue, itemIndex) =>
                             settoAddress(itemValue)
