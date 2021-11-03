@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ScrollView } from "react-native";
+import {StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ScrollView, Alert} from "react-native";
+
+import appUrl from '../RestApi/AppUrl';
 
 export default function App(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
- 
+
   return (
       <ScrollView>
     <View style={styles.container}>
@@ -49,7 +51,7 @@ export default function App(props) {
           onChangeText={(phone) => setPhone(phone)}
         />
       </View>
- 
+
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
@@ -68,9 +70,33 @@ export default function App(props) {
           onChangeText={(password) => setPassword(password)}
         />
       </View>
- 
+
       <TouchableOpacity style={styles.loginBtn} onPress={() =>{
-            props.navigation.navigate("Home")
+
+        const url = appUrl.UserCreate;
+        const config = {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name:name, phone:phone, email:email, password:password })
+        };
+
+        fetch(url,config)
+            .then((response) => response.json())
+            .then((responseJson) => {
+              if (responseJson.status == "1")
+              {
+                Alert.alert(responseJson.message);
+                props.navigation.navigate("Home");
+              }else if(responseJson.status == "0"){
+                Alert.alert(responseJson.message);
+              }
+            })
+            .catch((error) => {
+              //Alert.alert("Failed to registration 2");
+            });
         }}>
         <Text style={styles.textLogin}>Sign Up</Text>
       </TouchableOpacity>
@@ -78,7 +104,7 @@ export default function App(props) {
     </ScrollView>
   );
 }
- 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -127,7 +153,7 @@ const styles = StyleSheet.create({
     width: 230,
     marginBottom: 30
   },
- 
+
   inputView: {
     backgroundColor: "#ffffff",
     borderColor: "#0f0f0f",
@@ -138,13 +164,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     alignItems: "center",
   },
- 
+
   TextInput: {
     height: 50,
     flex: 1,
     padding: 5,
   },
- 
+
   forgot_button: {
     height: 30,
     marginBottom: 30,
@@ -158,7 +184,7 @@ const styles = StyleSheet.create({
     marginTop: 40,
     backgroundColor: "#f5f0f0",
   },
- 
+
   loginBtn: {
     width: "90%",
     borderRadius: 10,
